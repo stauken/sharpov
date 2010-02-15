@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA7B1A25-272D-483F-857E-0FACFD13C2E0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Sharpov</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ircBot\Colours.cs" />
+    <Compile Include="ircBot\ReplyConstants.cs" />
+    <Compile Include="ircBot\ircBot.cs" />
+    <Compile Include="ircBot\IrcException.cs" />
+    <Compile Include="ircBot\NickAlreadyInUseException.cs" />
+    <Compile Include="ircBot\DccFileTransfer.cs" />
+    <Compile Include="ircBot\DccManager.cs" />
+    <Compile Include="ircBot\DccChat.cs" />
+    <Compile Include="ircBot\User.cs" />
+    <Compile Include="ircBot\InetAddress.cs" />
+    <Compile Include="ircBot\InputThread.cs" />
+    <Compile Include="ircBot\OutputThread.cs" />
+    <Compile Include="ircBot\IdentServer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ircBot\" />
+  </ItemGroup>
+</Project>
