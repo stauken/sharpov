@@ -1,0 +1,1 @@
+IRC chatter bot that uses Markov Chains to generate responses.
